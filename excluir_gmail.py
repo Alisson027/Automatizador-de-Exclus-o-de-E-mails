@@ -3,8 +3,8 @@ import email
 from email.header import decode_header
 
 # Configurações do e-mail
-email_user = 'alissondsc17@gmail.com'
-email_pass = 'uectzubvmjgffhwo'
+email_user = # coloque o  seu email
+email_pass = #coloque a sua senha de app do Gmail.
 
 # Conectar-se ao servidor IMAP usando imaplib
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
@@ -15,7 +15,7 @@ mail.login(email_user, email_pass)
 # Selecionar a caixa de entrada (inbox)
 mail.select('inbox')
 
-# Buscar todos os e-mails que contenham o assunto" " ou corpo
+# Buscar todos os e-mails que contenham o assunto"PicPay" ou corpo
 status, messages = mail.search(None, '(OR SUBJECT "PicPay" TEXT "picpay")')
 
 if status == 'OK':
